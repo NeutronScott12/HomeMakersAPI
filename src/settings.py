@@ -25,7 +25,7 @@ SECRET_KEY = '9b*1iq1@9%ne2wpdb@=l4gsoixu&gm=l+@n$hgh^n!sm!9z0xy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','homemakerapi.herokuapp.com']
 
 
 # Application definition
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'shop',
+    'API'
 ]
 
 MIDDLEWARE = [
@@ -123,6 +126,9 @@ STATICFILES_URL = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticFiles')
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploaded_media')
+MEDIA_URL = '/media/'
 
 import dj_database_url 
 db_from_env = dj_database_url.config(conn_max_age=500)

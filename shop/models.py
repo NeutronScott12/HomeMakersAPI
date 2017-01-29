@@ -2,6 +2,8 @@ from django.db import models
 import uuid
 import os
 from cloudinary.models import CloudinaryField
+import moneyed
+from djmoney.models.fields import MoneyField
 
 # Create your models here.
 def upload(file, **options):
@@ -34,7 +36,7 @@ class Product(models.Model):
     title = models.CharField(max_length=200)
     short_description = models.TextField()
     long_description = models.TextField()
-    price = models.DecimalField(max_digits=10, decimal_places=5)
+    price = MoneyField(max_digits=10, decimal_places=2, default_currency='GBP')
     stock = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'API',
     'webpack_loader',
     'corsheaders',
-    'cloudinary'
+    'cloudinary',
+    'djmoney'
 ]
 
 # REST_FRAMEWORK = {

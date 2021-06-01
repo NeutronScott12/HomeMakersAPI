@@ -20,5 +20,5 @@ py-moneyed==0.6.0
 python-dateutil==2.6.0
 s3transfer==0.1.10
 six==1.10.0
-urllib3==1.20
+urllib3==1.26.5
 whitenoise==3.2.3
